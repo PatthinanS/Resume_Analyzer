@@ -1,10 +1,22 @@
-AI Engineer
+AI & Data Solution (Intern)
 
-We are looking for an AI Engineer who can build practical LLM-powered applications.
-The role requires Python, API development, prompt engineering, retrieval augmented
-generation, evaluation, JSON output design, and experience working with PDF or text
-processing pipelines. Familiarity with OpenAI APIs, FastAPI or backend web services,
-Git, Docker, cloud deployment, and basic frontend integration is preferred.
+ Description:
 
-Responsibilities include parsing user documents, comparing extracted content against
-job requirements, returning structured analysis, and improving model reliability.
+Responsibilities
+
+    ทำงานร่วมกับผู้ใช้งานหรือทีมพัฒนาธุรกิจ เพื่อรวบรวมและทำความเข้าใจความต้องการของระบบ
+    ออกแบบ พัฒนา และปรับแต่งคำสั่ง prompt เพื่อเพิ่มประสิทธิภาพการทำงานของ AI
+    ออกแบบโครงสร้างระบบ กระบวนการทำงาน และการใช้งานของ AI application
+    ใช้ Large Language Models (LLMs) เพื่อพัฒนา AI application
+    ทดสอบการทำงานและประเมินประสิทธิภาพของ AI application
+    ทำงานร่วมกับทีมวิศวกรซอฟต์แวร์อย่างใกล้ชิด เพื่อนำ AI application ไปใช้ในระบบจริง
+
+
+Qualifications
+
+    ชำนาญในการเขียนโปรแกรมด้วย Python, prompt engineering, และ context engineering
+    มีทักษะในการคิดวิเคราะห์และแก้ไขปัญหาได้อย่างดีเยี่ยม
+    มีความสนใจในด้าน AI ระบบอัตโนมัติ (automation) และ data-driven solutions
+    มีความเข้าใจพื้นฐานเกี่ยวกับการ Natural Language Processing - NLP และแนวคิดของ machine learning
+    มีประสบการณ์ในการทำงานกับ API, JSON หรือ automation pipelines
+    หากมีประสบการณ์การใช้งานเครื่องมือหรือเทคโนโลยี เช่น n8n, SQL, Docker หรือ แพลตฟอร์ม Cloud จะได้รับการพิจารณาเป็นพิเศษ
