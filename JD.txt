@@ -1,0 +1,10 @@
+AI Engineer
+
+We are looking for an AI Engineer who can build practical LLM-powered applications.
+The role requires Python, API development, prompt engineering, retrieval augmented
+generation, evaluation, JSON output design, and experience working with PDF or text
+processing pipelines. Familiarity with OpenAI APIs, FastAPI or backend web services,
+Git, Docker, cloud deployment, and basic frontend integration is preferred.
+
+Responsibilities include parsing user documents, comparing extracted content against
+job requirements, returning structured analysis, and improving model reliability.
