@@ -10,6 +10,9 @@ AI-powered resume analyzer that compares resumes against job descriptions using 
 - Web UI for easy interaction
 - RESTful API endpoints
 
+### Flowchart
+![flowchart](resume_analyzer_flowchart.png)
+
 ## Quick Start
 
 ### Local Development
