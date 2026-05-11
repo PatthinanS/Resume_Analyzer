@@ -28,8 +28,11 @@ def analyze_resume(resume_text: str, job_description: str) -> dict[str, Any] | N
         "required_output": {
             "matching_score": "integer 0-100",
             "summary": "brief fit summary",
+            "education": ["degree in field from institution"],
+            "experience": ["job title at company for duration"],
             "matched_skills": ["skill"],
-            "missing_skills": ["skill"],
+            "knowledge": ["knowledge area"],
+            "tools": ["tool"],
             "concerns": ["concern"],
         },
     }

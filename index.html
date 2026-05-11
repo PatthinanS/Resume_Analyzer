@@ -66,6 +66,27 @@
         background: #1967d2;
         font-weight: 700;
         cursor: pointer;
+        margin-right: 8px;
+      }
+
+      button.secondary {
+        background: #34a853;
+      }
+
+      button.secondary:hover {
+        background: #2d8e47;
+      }
+
+      button:hover {
+        background: #1557b0;
+      }
+
+      button#download-button {
+        display: none;
+      }
+
+      button#download-button.visible {
+        display: inline-block;
       }
 
       button:disabled {
@@ -100,7 +121,10 @@
           Resume PDF
           <input id="resume" name="resume" type="file" accept="application/pdf,.pdf" required />
         </label>
-        <button id="submit-button" type="submit">Analyze Resume</button>
+        <div style="display: flex; gap: 8px;">
+          <button id="submit-button" type="submit">Analyze Resume</button>
+          <button id="download-button" class="secondary" type="button">Download JSON</button>
+        </div>
       </form>
 
       <pre id="output">JSON output will appear here.</pre>
@@ -109,7 +133,9 @@
     <script>
       const form = document.querySelector("#resume-form");
       const button = document.querySelector("#submit-button");
+      const downloadButton = document.querySelector("#download-button");
       const output = document.querySelector("#output");
+      let currentResult = null;
 
       form.addEventListener("submit", async (event) => {
         event.preventDefault();
@@ -122,6 +148,7 @@
         body.append("job_description_text", jobDescription);
 
         button.disabled = true;
+        downloadButton.classList.remove("visible");
         output.textContent = "Analyzing...";
 
         try {
@@ -130,8 +157,12 @@
             body,
           });
           const result = await response.json();
+          currentResult = result;
           output.textContent = JSON.stringify(result, null, 2);
+          downloadButton.classList.add("visible");
         } catch (error) {
+          currentResult = null;
+          downloadButton.classList.remove("visible");
           output.textContent = JSON.stringify(
             { error: "Request failed", detail: error.message },
             null,
@@ -140,6 +171,23 @@
         } finally {
           button.disabled = false;
         }
+      });
+
+      downloadButton.addEventListener("click", () => {
+        if (!currentResult) return;
+        
+        const timestamp = new Date().toISOString().split('T')[0];
+        const filename = `resume-analysis-${timestamp}.json`;
+        const dataStr = JSON.stringify(currentResult, null, 2);
+        const dataBlob = new Blob([dataStr], { type: "application/json" });
+        const url = URL.createObjectURL(dataBlob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
       });
     </script>
   </body>
