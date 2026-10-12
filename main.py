@@ -21,7 +21,7 @@ def extract_pdf(pdf_path: str) -> str:
 
 def analyze_resume(resume_text: str, job_description: str) -> dict[str, Any] | None:
     client = OpenAI()
-    model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+    model = os.getenv("OPENAI_MODEL", "gpt-6-sol")
     prompt = {
         "job_description": job_description,
         "resume_text": resume_text,
