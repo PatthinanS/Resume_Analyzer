@@ -81,7 +81,7 @@ AI-powered resume analyzer that compares resumes against job descriptions using 
 ## Environment Variables
 
 - `OPENAI_API_KEY` - Your OpenAI API key (required)
-- `OPENAI_MODEL` - Model to use (default: gpt-4o-mini)
+- `OPENAI_MODEL` - Model to use (default: gpt-6-sol)
 
 ## File Structure
 
