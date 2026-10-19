@@ -2,6 +2,8 @@
 
 AI-powered resume analyzer that compares resumes against job descriptions using OpenAI's API.
 
+Frontend design: [Figma](https://www.figma.com/design/PjTRA561P7lT2RgQ3PsFkx/SafeSarn?node-id=0-1&t=FrUN5IhVYDJZxDA9-1).
+
 ## Features
 
 - Upload resume PDFs
